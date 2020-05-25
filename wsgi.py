@@ -6,17 +6,19 @@ application = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@application.route("/generic")
-def generic():
-    return render_template('generic.html')
+@application.route("/categories")
+def categories():
+    return render_template('categories.html')
 
-@application.route("/elements")
-def elements():
-    return render_template('elements.html')
+@application.route("/blog")
+def blog():
+    return render_template('blog-single.html')
 
-@application.route("/homepage")
-def homepage():
-    return render_template('homepage.html')
+@application.route("/about")
+def about():
+    return render_template('about.html')
+
 
 if __name__ == "__main__":
     application.run()
+
